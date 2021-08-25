@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .calculator{
     width: 290px;
     height: 300px;
@@ -39,4 +40,47 @@
 }
 #equal-sign:hover{
     background-color: darkgrey;
+=======
+.calculator{
+    width: 290px;
+    height: 300px;
+    background-color: darkcyan;
+    margin: 100px auto;
+    border-radius: 5px;
+}
+.main-form{
+    padding: 10px;
+}
+#display{
+    text-align: right;
+    font-weight: bold;
+    height: 35px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: rgb(214, 208, 208);
+    padding: 10px;
+    outline: none;
+}
+.btn{
+    width: 64px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: rgb(140, 224, 224);
+}
+.btn:hover{
+    background-color: darkgrey;
+}
+#equal-sign{
+    width: 132px;
+    background-color: rgb(71, 192, 71);
+    
+}
+#equal-sign:hover{
+    background-color: darkgrey;
+>>>>>>> ee8c9d509c4621b9f6ee343be00d8a9c744951ae
 }

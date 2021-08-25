@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,4 +89,96 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <form class="main-form" action="">
+            <input id="display" type="text" name="" id="" value="" placeholder="0">
+            <br>
+            <input id="seven" class="btn" type="button" value="7">
+            <input id="eight" class="btn" type="button" value="8">
+            <input id="nine" class="btn" type="button" value="9">
+            <input id="off" class="btn" type="button" value="OFF">
+            <br>
+            <input id="four" class="btn" type="button" value="4">
+            <input id="five" class="btn" type="button" value="5">
+            <input id="six" class="btn" type="button" value="6">
+            <input id="divide" class="btn" type="button" value="/">
+            <br>
+            <input id="one" class="btn" type="button" value="1">
+            <input id="two" class="btn" type="button" value="2">
+            <input id="three" class="btn" type="button" value="3">
+            <input id="multiply" class="btn" type="button" value="*">
+            <br>
+            <input id="zero" class="btn" type="button" value="0">
+            <input id="double-zero" class="btn" type="button" value="00">
+            <input id="point" class="btn" type="button" value=".">
+            <input id="subtract" class="btn" type="button" value="-">
+            <input id="clear" class="btn" type="button" value="C">
+            <input id="equal-sign" class="btn" type="button" value="=">
+            <input id="add" class="btn" type="button" value="+">
+        </form>
+    </div>
+    <script>
+        getNumber('seven');
+        getNumber('eight');
+        getNumber('nine');
+        getNumber('six');
+        getNumber('five');
+        getNumber('four');
+        getNumber('three');
+        getNumber('two');
+        getNumber('one');
+        getNumber('zero');
+        getNumber('double-zero');
+
+        operator('add');
+        operator('divide');
+        operator('multiply');
+        operator('subtract');
+        operator('point');
+
+        clear('off');
+        clear('clear');
+
+        function getNumber(id) {
+            const btn = document.getElementById(id);
+            btn.addEventListener('click', function () {
+                const display = document.getElementById('display').value;
+                document.getElementById('display').value = display + parseInt(document.getElementById(id).value);
+            })
+        }
+        function operator(id) {
+            const addition = document.getElementById(id);
+            addition.addEventListener("click", function () {
+                const sign = document.getElementById(id).value;
+                const display = document.getElementById('display').value;
+                document.getElementById('display').value = display + sign;
+            })
+        }
+        document.getElementById('equal-sign').addEventListener("click",function(){
+            const display =  document.getElementById('display').value;
+            document.getElementById('display').value = eval(display);
+        })
+        function clear(id){
+            document.getElementById(id).addEventListener("click",function(){
+            document.getElementById('display').value = '';
+        })
+        }
+    </script>
+
+</body>
+
+>>>>>>> ee8c9d509c4621b9f6ee343be00d8a9c744951ae
 </html>
